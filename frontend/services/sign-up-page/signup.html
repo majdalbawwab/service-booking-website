@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../form-styles.css">
+</head>
+<body>
+<header>
+    <h1>Home Service Application - Sign Up</h1>
+</header>
+<div class="booking-form">
+    <h2>Create Account</h2>
+    <form id="signup-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="user-type">Select User Type:</label>
+        <select id="user-type" name="user-type" required>
+            <option value="user">User</option>
+            <option value="provider">Service Provider</option>
+        </select>
+
+        <div id="services-provided" style="display: none;">
+            <h3>Services Provided</h3>
+            <label><input type="checkbox" name="services" value="Plumbing"> Plumbing</label>
+            <label><input type="checkbox" name="services" value="Electrical"> Electrical</label>
+            <label><input type="checkbox" name="services" value="Cleaning"> Cleaning</label>
+            <label><input type="checkbox" name="services" value="Painting"> Painting</label>
+        </div>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</div>
+<script type="module" src="signup-scripts.js"></script>
+</body>
+</html>

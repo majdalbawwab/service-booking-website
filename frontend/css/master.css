@@ -1,50 +1,61 @@
 :root {
     --main-color: #ff9800;
+    --primary-color: #4CAF50;
+    --hover-color: #45a049;
+    --logout-color: #ff5722;
+    --logout-hover-color: #e64a19;
 }
-body{
+
+body {
     font-family: 'Open Sans', sans-serif;
 }
+
 /* Start settings box */
-.settings-box{    
+.settings-box {
     position: fixed;
     left: -200px;
     top: 0;
     background-color: white;
-    width:200px;
+    width: 200px;
     z-index: 1000;
     min-height: 100vh;
-    transition: .3;
+    transition: 0.3s;
 }
+
 .settings-box.open {
     left: 0;
 }
-.settings-box .toggle-settings{    
+
+.settings-box .toggle-settings {
     position: absolute;
     right: -30px;
     top: 100px;
     background-color: white;
     text-align: center;
     cursor: pointer;
-
 }
-.settings-box .toggle-settings .fa-gear{    
+
+.settings-box .toggle-settings .fa-gear {
     width: 30px;
     padding: 8px 0;
-
 }
-.settings-box .option-box {    
+
+.settings-box .option-box {
     padding: 20px;
 }
-.settings-box .option-box h4 {    
+
+.settings-box .option-box h4 {
     margin: 0;
-    color: #666 ;
+    color: #666;
 }
-.settings-box .option-box .colors-list{    
+
+.settings-box .option-box .colors-list {
     list-style: none;
     text-align: center;
     padding: 0;
 }
-.settings-box .option-box .colors-list li {    
+
+.settings-box .option-box .colors-list li {
     width: 20px;
     height: 20px;
     background-color: #333;
@@ -52,79 +63,110 @@ body{
     cursor: pointer;
     opacity: 0.5;
     display: inline-block;
-
 }
-.settings-box .option-box .colors-list li.active{
+
+.settings-box .option-box .colors-list li.active {
     opacity: 1;
 }
-.settings-box .option-box .colors-list li:first-child{
+
+.settings-box .option-box .colors-list li:first-child {
     background-color: #ff9800;
 }
-.settings-box .option-box .colors-list li:nth-child(2){
+
+.settings-box .option-box .colors-list li:nth-child(2) {
     background-color: #E91E63;
 }
-.settings-box .option-box .colors-list li:nth-child(3){
+
+.settings-box .option-box .colors-list li:nth-child(3) {
     background-color: #009688;
 }
-.settings-box .option-box .colors-list li:nth-child(4){
+
+.settings-box .option-box .colors-list li:nth-child(4) {
     background-color: #03A9F4;
 }
-.settings-box .option-box .colors-list li:nth-child(5){
+
+.settings-box .option-box .colors-list li:nth-child(5) {
     background-color: #4CAF50;
 }
+
 /* end settings box */
+
 /* start landing page */
-.landing-page{
+.landing-page {
     min-height: 100vh;
     background-size: cover;
     position: relative;
 }
-.landing-page .overlay{
-    background-color: #00000057; 
+
+.landing-page .overlay {
+    background-color: #00000057;
     position: absolute;
     width: 100%;
     height: 100%;
     left: 0;
     top: 0;
     z-index: 1;
-
 }
+
 .header-area {
     position: relative;
     z-index: 2;
     color: white;
     display: flex;
     padding: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
-.header-area .logo{
+
+.header-area .logo {
     width: 300px;
     padding: 15px;
-    font-weight: bold ;
+    font-weight: bold;
 }
-.header-area .links{
-    list-style: none ;
+
+.header-area .links {
+    list-style: none;
     padding-left: 0;
     width: 100%;
     text-align: right;
     padding-right: 20px;
     font-size: 15px;
-    
+    display: flex;
 }
-.header-area .links li{
 
+.header-area .links li {
     display: inline-block;
-    margin-left: 10px;
-    
+    margin-left: 30px;
 }
-.header-area .links li a{
+
+.header-area .links li a {
     text-decoration: none;
     color: white;
     transition: 0.3s;
 }
+
 .header-area .links li a:hover,
-.header-area .links li a.active{
+.header-area .links li a.active {
     color: var(--main-color);
 }
+
+.header-area .links .logout-container {
+    margin-left: auto;
+}
+
+.logout-button {
+    background-color: var(--logout-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.logout-button:hover {
+    background-color: var(--logout-hover-color);
+}
+
 .introduction-text {
     position: absolute;
     left: 50%;
@@ -134,16 +176,74 @@ body{
     color: #fff;
     text-align: center;
 }
-.introduction-text h1  {
+
+.introduction-text h1 {
     font-size: 36px;
     margin: 0 0 13px;
 }
+
 .introduction-text h1 span {
     color: var(--main-color);
 }
+
 .introduction-text p {
     line-height: 1.6;
     font-size: 20px;
     margin: 0;
 }
+
 /* end landing page */
+
+/* New styles for the services section */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.service {
+    flex: 1 1 calc(33.333% - 2rem);
+    margin: 1rem;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.service p {
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.service a {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.service a:hover {
+    background-color: var(--hover-color);
+}

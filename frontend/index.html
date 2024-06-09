@@ -8,47 +8,79 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="services/styles.css"> <!-- Added -->
 </head>
 <body>
-    <!--start Settings Box-->
-    <div class="settings-box">
-        <div class="toggle-settings">
-            <i class="fa fa-gear"></i>
-        </div>
-        <div class="settings-container">
-            <div class="option-box">
-                <h4>Colors</h4>
-                <ul class="colors-list">
-                    <li class="active" data-color="#ff9800"></li>
-                    <li data-color="#E91E63"></li>
-                    <li data-color="#009688"></li>
-                    <li data-color="#03A9F4"></li>
-                    <li data-color="#4CAF50"></li>
-                </ul>
-            </div>
-        </div>
+<!--start Settings Box-->
+<div class="settings-box">
+    <div class="toggle-settings">
+        <i class="fa fa-gear"></i>
     </div>
-    <!--End Settings Box-->
-
-    <!-- Start Landing Page -->
-    <div class="landing-page">
-        <div class="overlay"></div>
-        <div class="header-area">
-            <div class="logo">Special Design</div>
-            <ul class="links">
-                <li><a href="#" class="active">About</a></li>
-                <li><a href="services/ThirdPage.html">Service</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact</a></li>
+    <div class="settings-container">
+        <div class="option-box">
+            <h4>Colors</h4>
+            <ul class="colors-list">
+                <li class="active" data-color="#ff9800"></li>
+                <li data-color="#E91E63"></li>
+                <li data-color="#009688"></li>
+                <li data-color="#03A9F4"></li>
+                <li data-color="#4CAF50"></li>
             </ul>
         </div>
-        <div class="introduction-text">
-            <h1>we <span>provide</span> home services</h1>
-            <p></p>
+    </div>
+</div>
+<!--End Settings Box-->
+
+<!-- Start Landing Page -->
+<div class="landing-page">
+    <div class="overlay"></div>
+    <div class="header-area">
+        <div class="logo">Special Design</div>
+        <ul class="links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Notifications</a></li>
+            <li><a href="#">Bookings</a></li>
+            <li id="profile-tab" style="display: none;"><a href="#">Profile</a></li>
+            <li class="logout-container"><a href="#" id="logout-button" class="logout-button">Log out</a></li>
+        </ul>
+    </div>
+    <div class="introduction-text">
+        <h1>we <span>provide</span> home services</h1>
+        <p></p>
+    </div>
+</div>
+<!-- End Landing Page -->
+
+<!-- Start Services Section -->
+<div id="user-services" class="section" >
+    <h2>Our Services</h2>
+    <div class="services">
+        <div class="service">
+            <h3>Plumbing</h3>
+            <p>Professional plumbing services for all your needs.</p>
+            <a href="#">Book now</a>
+        </div>
+        <div class="service">
+            <h3>Electrical</h3>
+            <p>Expert electrical services to keep your home running smoothly.</p>
+            <a href="#">Book now</a>
+        </div>
+        <div class="service">
+            <h3>Cleaning</h3>
+            <p>Comprehensive cleaning services for your home.</p>
+            <a href="#">Book now</a>
+        </div>
+        <div class="service">
+            <h3>Painting</h3>
+            <p>Professional painting services for a fresh look.</p>
+            <a href="#">Book now</a>
         </div>
     </div>
-    <!-- End Landing Page -->
+</div>
+<!-- End Services Section -->
 
-    <script src="js/master.js"></script>
+<script src="js/master.js"></script>
+<script type="module" src="services/scripts.js"></script> <!-- Added -->
 </body>
 </html>

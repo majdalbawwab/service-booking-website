@@ -1,0 +1,14 @@
+import { getUserData } from './user.interface.js';
+
+// Retrieve user data from localStorage
+const user = getUserData();
+
+if (user) {
+    console.log('User is signed in:', user);
+    // You can use the user data as needed in your page
+    document.getElementById('user-name').textContent = user.name; // Example usage
+} else {
+    console.log('No user is signed in.');
+    // Optionally, redirect to sign-in page if not signed in
+    // window.location.href = 'signin.html';
+}
